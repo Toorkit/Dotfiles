@@ -24,19 +24,11 @@ config push
 ```
 
 
-## Cloning to a new machine
-
-- Make sure to add the alias:
-`alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'`
-- Then clone it like so:
-`git clone --bare <git-repo-url> $HOME/.cfg`
-
-
 ## Attributions
 Thank you's to people on Hacker News for the [git tips](https://www.atlassian.com/git/tutorials/dotfiles).
 
 
-## Random theming bits for a new install (I will forget):
+## Random theming bits for a new install (because I will forget):
 [Qbittorrent Theme](https://github.com/catppuccin/qbittorrent)
 The capitaine-cursors, breeze-gtk and arc-icon-theme packages in the Arch repository.
 Kitty Terminal themes can be easily installed with `kitty +kitten themes`.
