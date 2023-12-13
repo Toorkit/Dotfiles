@@ -143,6 +143,12 @@ bindsym $mod+comma workspace number $ws8
 bindsym $mod+period workspace number $ws9
 bindsym $mod+slash workspace number $ws10
 
+# switch to last used workspace
+bindsym $alt+Tab workspace back_and_forth
+# cycle forward and backward through workspaces
+bindsym $mod+Tab workspace next 
+bindsym $mod+Shift+Tab workspace prev
+
 # move focused container to workspace
 bindsym $mod+Shift+z move container to workspace number $ws1
 bindsym $mod+Shift+x move container to workspace number $ws2

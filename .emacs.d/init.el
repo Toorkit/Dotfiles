@@ -332,8 +332,8 @@
  ;; a running emacs in daemon mode, so instead we define the key in the
  ;; key-translation-map.
  ;; http://lists.gnu.org/archive/html/help-gnu-emacs/2009-10/msg00505.html
- (define-key key-translation-map [?\C-x] [?\C-t])
- (define-key key-translation-map [?\C-t] [?\C-x])
+;(define-key key-translation-map [?\C-x] [?\C-t])
+;(define-key key-translation-map [?\C-t] [?\C-x])
  ;;
 (global-set-key (kbd "C-x C-k") 'kill-this-buffer)
 (global-set-key (kbd "C-x t") 'load-theme)
