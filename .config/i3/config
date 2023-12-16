@@ -14,7 +14,7 @@ set $alt Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:IBM Plex Mono 10
+font pango:IBM Plex Sans 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -195,26 +195,45 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Define colors here
+set $bg         #100F0F
+set $bg-2       #1C1B1A
+# borders, hovered borders and active borders
+set $ui         #282726
+set $ui-2       #343331
+set $ui-3       #403E3C
+# primary text and paper is focused workspace text
+set $tx         #CECDC3
+set $paper      #FFFCF0
+# colors
+set $re         #AF3029
+set $or         #BC5215
+set $ye         #AD8301
+set $gr         #66800B
+set $cy         #24837B
+set $bl         #205EA6
+set $pu         #5E409D
+set $ma         #A02F6F
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
 	position top
-        status_command i3status
+    status_command i3status
 	tray_output primary
 	strip_workspace_numbers yes
 
-	# colors
 	colors {
-		background #100f0f
-		separator  #100f0f
-		statusline #fffcf0
+		background $bg
+		separator  $bg
+		statusline $tx
 
-		# 		   brdr    bkgr    txt
-		focused_workspace  #205ea6 #205ea6 #fffcf0
-        	active_workspace   #333333 #5f676a #fffcf0
-	        inactive_workspace #282726 #282726 #888888
-        	urgent_workspace   #d14d41 #af3029 #fffcf0
-	        binding_mode       #66800b #879a39 #fffcf0	
+		#                  brdr     bkgr     txt
+		focused_workspace  $bl      $bl      $paper
+        active_workspace   $ui-3    $ui-3    $tx
+	    inactive_workspace $ui      $ui      $tx    
+        urgent_workspace   $re      $re      $tx
+	    binding_mode       $gr      $gr      $tx
 
 	}
 }
@@ -223,13 +242,13 @@ bar {
 # Appearance
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #205ea6 #205ea6 #fffcf0 #2e9ef4   #403e3c
-client.focused_inactive #282726 #5f676a #fffcf0 #484e50   #222222
-client.unfocused        #282726 #282726 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 #fffcf0 #900000   #900000
-client.placeholder      #000000 #0c0c0c #fffcf0 #000000   #0c0c0c
+client.focused          $ui-3   $ui-3   $tx     $bl       $ui-3
+client.focused_inactive $ui     $ui     $tx     $bg       $ui
+client.unfocused        $bg     $bg     $tx     $bg       $ui
+client.urgent           $re     $re     $tx     $re       $re
+client.placeholder      $bg     $bg     $tx     $bg       $bg
 
-client.background       #fffcf0
+client.background       $tx
 
 
 # Behaviour
@@ -237,9 +256,15 @@ client.background       #fffcf0
 # for smart_borders, also: no_gaps
 smart_borders on
 hide_edge_borders smart
-default_border pixel 1
+default_border pixel 3
+default_floating_border pixel 0
 workspace_auto_back_and_forth yes
 
+# enable or disable gaps
+gaps inner 12
+gaps outer 1
+gaps top 2
+smart_gaps on
 
 # Monitors
 
