@@ -196,21 +196,20 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Define colors here
-set $bg         #100F0F
+set $bg         #19171c
 set $bg-2       #1C1B1A
-# borders, hovered borders and active borders
-set $ui         #282726
-set $ui-2       #343331
-set $ui-3       #403E3C
+# border and active borders
+set $ui         #302a34
+set $ui-2     #403E3C
 # primary text and paper is focused workspace text
-set $tx         #CECDC3
-set $paper      #FFFCF0
+set $tx         #82858e
+set $paper      #19171c
 # colors
 set $re         #AF3029
-set $or         #BC5215
-set $ye         #AD8301
-set $gr         #66800B
-set $cy         #24837B
+set $or         #cb5b05
+set $ye         #9e8f78
+set $gr         #2c4339
+set $cy         #526865
 set $bl         #205EA6
 set $pu         #5E409D
 set $ma         #A02F6F
@@ -219,9 +218,11 @@ set $ma         #A02F6F
 # finds out, if available)
 bar {
 	position top
+    output primary
     status_command i3status
 	tray_output primary
 	strip_workspace_numbers yes
+
 
 	colors {
 		background $bg
@@ -229,8 +230,8 @@ bar {
 		statusline $tx
 
 		#                  brdr     bkgr     txt
-		focused_workspace  $bl      $bl      $paper
-        active_workspace   $ui-3    $ui-3    $tx
+		focused_workspace  $tx      $tx      $bg
+        active_workspace   $ui-2    $ui-2    $tx
 	    inactive_workspace $ui      $ui      $tx    
         urgent_workspace   $re      $re      $tx
 	    binding_mode       $gr      $gr      $tx
@@ -242,7 +243,7 @@ bar {
 # Appearance
 
 # class                 border  backgr. text    indicator child_border
-client.focused          $ui-3   $ui-3   $tx     $bl       $ui-3
+client.focused          $ui-2   $ui-2   $tx     $bl       $cy
 client.focused_inactive $ui     $ui     $tx     $bg       $ui
 client.unfocused        $bg     $bg     $tx     $bg       $ui
 client.urgent           $re     $re     $tx     $re       $re
@@ -256,14 +257,14 @@ client.background       $tx
 # for smart_borders, also: no_gaps
 smart_borders on
 hide_edge_borders smart
-default_border pixel 3
+default_border pixel 2
 default_floating_border pixel 0
 workspace_auto_back_and_forth yes
 
 # enable or disable gaps
-gaps inner 12
-gaps outer 1
-gaps top 2
+gaps inner 7
+gaps outer 0
+gaps top 0
 smart_gaps on
 
 # Monitors
