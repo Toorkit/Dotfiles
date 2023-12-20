@@ -166,7 +166,7 @@ bindsym $mod+Shift+r reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 #bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+semicolon exec "i3-nagbar -t warning -m 'Exit i3?' -B 'Yes' 'i3-msg exit'"
+bindsym $mod+Shift+j exec "i3-nagbar -t warning -m 'Exit i3?' -B 'Yes' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -195,15 +195,31 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Power Options
+mode "power" {
+        # These bindings trigger as soon as you enter the power mode
+
+        bindsym a exec i3lock -u -i /mnt/hdd/Drive/Photos/Wallpapers/desert_dune_colorful.png
+        bindsym r exec i3lock -u -i /mnt/hdd/Drive/Photos/Wallpapers/desert_dune_colorful.png; systemctl suspend
+        bindsym s exec poweroff
+
+        # back to normal: Enter or Escape or $mod+;
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+BackSpace mode "default"
+}
+
+bindsym $mod+BackSpace mode "power"
+
 # Define colors here
 set $bg         #19171c
 set $bg-2       #1C1B1A
 # border and active borders
 set $ui         #302a34
-set $ui-2     #403E3C
+set $ui-2       #403E3C
 # primary text and paper is focused workspace text
-set $tx         #82858e
-set $paper      #19171c
+set $tx         #8E9199  
+set $status     #CECDC3 
 # colors
 set $re         #AF3029
 set $or         #cb5b05
@@ -227,7 +243,7 @@ bar {
 	colors {
 		background $bg
 		separator  $bg
-		statusline $tx
+		statusline $status
 
 		#                  brdr     bkgr     txt
 		focused_workspace  $tx      $tx      $bg
