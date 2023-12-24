@@ -30,6 +30,6 @@ Thank you's to people on Hacker News for the [git tips](https://www.atlassian.co
 
 ## Random theming bits for a new install (because I will forget):
 [Qbittorrent Theme](https://github.com/catppuccin/qbittorrent)
-The capitaine-cursors, breeze-gtk and arc-icon-theme packages in the Arch repository.
+The capitaine-cursors, breeze-gtk and papirus-icon-theme packages in the Arch repository.
 Kitty Terminal themes can be easily installed with `kitty +kitten themes`.
 [Rofi Themes](https://github.com/newmanls/rofi-themes-collection).
