@@ -61,11 +61,12 @@
    ["#1B2229" "#e74c3c" "#b6e63e" "#e2c770" "#268bd2" "#fb2874" "#66d9ef" "#ffffff"])
  '(column-number-mode t)
  '(custom-safe-themes
-   '("e87fd8e24e82eb94d63b1a9c79abc8161d25de9f2f13b64014d3bf4b8db05e9a" "f058c82b57bc27ff4288f7ff702fcc4d298608c4de5933224aaceb770c0c9e19" default))
+   '("691d671429fa6c6d73098fc6ff05d4a14a323ea0a18787daeb93fde0e48ab18b" "34cf3305b35e3a8132a0b1bdf2c67623bc2cb05b125f8d7d26bd51fd16d547ec" "df6dfd55673f40364b1970440f0b0cb8ba7149282cf415b81aaad2d98b0f0290" "342f853c3d097d60a01a8e17559d2cc4e6ccd4c8e8c4d32cdfb5d53fdd50ca27" "7964b513f8a2bb14803e717e0ac0123f100fb92160dcf4a467f530868ebaae3e" "c5878086e65614424a84ad5c758b07e9edcf4c513e08a1c5b1533f313d1b17f1" "e3daa8f18440301f3e54f2093fe15f4fe951986a8628e98dcd781efbec7a46f2" "7ec8fd456c0c117c99e3a3b16aaf09ed3fb91879f6601b1ea0eeaee9c6def5d9" "8d3ef5ff6273f2a552152c7febc40eabca26bae05bd12bc85062e2dc224cde9a" "4990532659bb6a285fee01ede3dfa1b1bdf302c5c3c8de9fad9b6bc63a9252f7" "88f7ee5594021c60a4a6a1c275614103de8c1435d6d08cc58882f920e0cec65e" "e87fd8e24e82eb94d63b1a9c79abc8161d25de9f2f13b64014d3bf4b8db05e9a" "f058c82b57bc27ff4288f7ff702fcc4d298608c4de5933224aaceb770c0c9e19" default))
  '(doc-view-continuous t)
  '(doom-modeline-mode t)
  '(fci-rule-color "#555556")
  '(global-linum-mode nil)
+ '(highlight-indent-guides-method 'bitmap)
  '(initial-scratch-message nil)
  '(jdee-db-active-breakpoint-face-colors (cons "#1B2229" "#fd971f"))
  '(jdee-db-requested-breakpoint-face-colors (cons "#1B2229" "#b6e63e"))
@@ -74,7 +75,7 @@
  '(objed-cursor-color "#99324B")
  '(package-hidden-regexps '(""))
  '(package-selected-packages
-   '(markdown-preview-mode geiser-guile company flexoki-themes doom-modeline sly racket-mode paredit zen-mode sublimity minimap minimap-mode deft ace-window diminish Magit which-key use-package bind-key theme-changer evil-mc all-the-icons-ivy doom-themes neotree markdown-mode lua-mode magit ivy))
+   '(highlight-indent-guides markdown-preview-mode company flexoki-themes doom-modeline sly racket-mode paredit zen-mode sublimity minimap minimap-mode deft ace-window diminish Magit which-key use-package bind-key theme-changer evil-mc all-the-icons-ivy doom-themes neotree markdown-mode lua-mode magit ivy))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(vc-annotate-background "#1c1e1f")
@@ -149,7 +150,8 @@
 ;; obsolete?
 ;;(setq redisplay-dont-pause t)
 ;; built-in alternative to smartparens
-(electric-pair-mode 1)
+;; (don't use in conjunction with parinfer)
+;(electric-pair-mode 1)
 ; Scroll just one line when hitting bottom of window
 (setq scroll-conservatively 10000)
 ;; Automatically expand org mode headers
@@ -222,7 +224,10 @@
 ;  (add-hook 'scheme-mode-hook #'parinfer-rust-mode)
 ;  (add-hook 'racket-mode-hook #'parinfer-rust-mode)
 ;  (add-hook 'lisp-mode-hook #'parinfer-rust-mode))
-;; Change theme automatically depending on time of day
+;(use-package parinfer-rust-mode
+;  :hook racket-mode emacs-lisp-mode common-lisp-mode scheme-mode lisp-mode clojure-mode
+;  :init
+;  (setq parinfer-rust-auto-download t))
 (use-package paredit
   :config (paredit-mode))
 (use-package doom-themes
@@ -237,12 +242,13 @@
   :config
   (setq doom-modeline-minor-modes t)
   (setq doom-modeline-height 10))
+;; Change theme automatically depending on time of day
 (use-package theme-changer
   :init
   (setq calendar-latitude 49.00) 
   (setq calendar-longitude 9.00)
   :config
-  (change-theme 'doom-nord-light 'doom-gruvbox))
+  (change-theme 'doom-solarized-light 'doom-gruvbox))
 (use-package magit
   :bind
   ("C-x g" . magit-status))
@@ -285,11 +291,10 @@
 	  (lambda ()
 	    (unless (sly-connected-p)
 	      (save-excursion (sly))))))
-(use-package geiser-guile
-  :config
-  ())
-; Currently not playing with Racket
-;(use-package racket-mode
+;(use-package geiser-guile)
+; For some reason, geiser-racket will not load the file into the repl.
+;(use-package geiser-racket)
+(use-package racket-mode)
 ;  :config
 ;  (setq racket-program "C:/Program Files/Racket/Racket.exe"))
 ;(use-package deft
@@ -307,6 +312,9 @@
 ;  (zetteldeft-set-classic-keybindings))
 (use-package minimap)
 (use-package markdown-mode)
+;(use-package highlight-indent-guides
+;  :config 
+;  (add-hook 'prog-mode-hook 'highlight-indent-guides-mode))
 
 ;;;; 4. Appearance
 

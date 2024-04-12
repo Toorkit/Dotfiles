@@ -28,13 +28,13 @@ order += "ethernet _first_"
 
 # RAM
 memory {
-   format = " %percentage_used   "
+   format = "󰍛 %percentage_used   "
 }
 
 # VOLUME
 volume master {
    format = " %volume   "
-   format_muted = "            "
+   format_muted = "󰝟          "
    device = "default"
    mixer = "Master"
    mixer_idx = 0
@@ -54,7 +54,7 @@ ethernet _first_ {
 
 # TIME
 time {
-        format = "📆 %a, %b %d    %H:%M"
+        format = "  %a, %b %d    %H:%M"
 }
 
 battery 0 {
@@ -69,8 +69,9 @@ run_watch VPN {
         pidfile = "/var/run/vpnc/pid"
 }
 
+# Load Average
 load {
-        format = " %1min   "
+        format = "󰌢  %1min   "
 }
 
 disk "/" {
