@@ -58,10 +58,32 @@
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
-   ["#1B2229" "#e74c3c" "#b6e63e" "#e2c770" "#268bd2" "#fb2874" "#66d9ef" "#ffffff"])
+   ["#1B2229" "#e74c3c" "#b6e63e" "#e2c770" "#268bd2" "#fb2874" "#66d9ef"
+    "#ffffff"])
  '(column-number-mode t)
  '(custom-safe-themes
-   '("691d671429fa6c6d73098fc6ff05d4a14a323ea0a18787daeb93fde0e48ab18b" "34cf3305b35e3a8132a0b1bdf2c67623bc2cb05b125f8d7d26bd51fd16d547ec" "df6dfd55673f40364b1970440f0b0cb8ba7149282cf415b81aaad2d98b0f0290" "342f853c3d097d60a01a8e17559d2cc4e6ccd4c8e8c4d32cdfb5d53fdd50ca27" "7964b513f8a2bb14803e717e0ac0123f100fb92160dcf4a467f530868ebaae3e" "c5878086e65614424a84ad5c758b07e9edcf4c513e08a1c5b1533f313d1b17f1" "e3daa8f18440301f3e54f2093fe15f4fe951986a8628e98dcd781efbec7a46f2" "7ec8fd456c0c117c99e3a3b16aaf09ed3fb91879f6601b1ea0eeaee9c6def5d9" "8d3ef5ff6273f2a552152c7febc40eabca26bae05bd12bc85062e2dc224cde9a" "4990532659bb6a285fee01ede3dfa1b1bdf302c5c3c8de9fad9b6bc63a9252f7" "88f7ee5594021c60a4a6a1c275614103de8c1435d6d08cc58882f920e0cec65e" "e87fd8e24e82eb94d63b1a9c79abc8161d25de9f2f13b64014d3bf4b8db05e9a" "f058c82b57bc27ff4288f7ff702fcc4d298608c4de5933224aaceb770c0c9e19" default))
+   '("02d422e5b99f54bd4516d4157060b874d14552fe613ea7047c4a5cfa1288cf4f"
+     "0d2c5679b6d087686dcfd4d7e57ed8e8aedcccc7f1a478cd69704c02e4ee36fe"
+     "dccf4a8f1aaf5f24d2ab63af1aa75fd9d535c83377f8e26380162e888be0c6a9"
+     "30d174000ea9cbddecd6cc695943afb7dba66b302a14f9db5dd65074e70cc744"
+     "f5f80dd6588e59cfc3ce2f11568ff8296717a938edd448a947f9823a4e282b66"
+     "9013233028d9798f901e5e8efb31841c24c12444d3b6e92580080505d56fd392"
+     "014cb63097fc7dbda3edf53eb09802237961cbb4c9e9abd705f23b86511b0a69"
+     "9d5124bef86c2348d7d4774ca384ae7b6027ff7f6eb3c401378e298ce605f83a"
+     "691d671429fa6c6d73098fc6ff05d4a14a323ea0a18787daeb93fde0e48ab18b"
+     "34cf3305b35e3a8132a0b1bdf2c67623bc2cb05b125f8d7d26bd51fd16d547ec"
+     "df6dfd55673f40364b1970440f0b0cb8ba7149282cf415b81aaad2d98b0f0290"
+     "342f853c3d097d60a01a8e17559d2cc4e6ccd4c8e8c4d32cdfb5d53fdd50ca27"
+     "7964b513f8a2bb14803e717e0ac0123f100fb92160dcf4a467f530868ebaae3e"
+     "c5878086e65614424a84ad5c758b07e9edcf4c513e08a1c5b1533f313d1b17f1"
+     "e3daa8f18440301f3e54f2093fe15f4fe951986a8628e98dcd781efbec7a46f2"
+     "7ec8fd456c0c117c99e3a3b16aaf09ed3fb91879f6601b1ea0eeaee9c6def5d9"
+     "8d3ef5ff6273f2a552152c7febc40eabca26bae05bd12bc85062e2dc224cde9a"
+     "4990532659bb6a285fee01ede3dfa1b1bdf302c5c3c8de9fad9b6bc63a9252f7"
+     "88f7ee5594021c60a4a6a1c275614103de8c1435d6d08cc58882f920e0cec65e"
+     "e87fd8e24e82eb94d63b1a9c79abc8161d25de9f2f13b64014d3bf4b8db05e9a"
+     "f058c82b57bc27ff4288f7ff702fcc4d298608c4de5933224aaceb770c0c9e19"
+     default))
  '(doc-view-continuous t)
  '(doom-modeline-mode t)
  '(fci-rule-color "#555556")
@@ -75,30 +97,24 @@
  '(objed-cursor-color "#99324B")
  '(package-hidden-regexps '(""))
  '(package-selected-packages
-   '(highlight-indent-guides markdown-preview-mode company flexoki-themes doom-modeline sly racket-mode paredit zen-mode sublimity minimap minimap-mode deft ace-window diminish Magit which-key use-package bind-key theme-changer evil-mc all-the-icons-ivy doom-themes neotree markdown-mode lua-mode magit ivy))
+   '(Magit ace-window all-the-icons-ivy bind-key corfu deft diminish
+           doom-modeline doom-themes evil-mc flexoki-themes
+           highlight-indent-guides ivy kind-icon lua-mode magit
+           markdown-mode markdown-preview-mode minimap minimap-mode
+           neotree paredit racket-mode sly sublimity theme-changer
+           use-package which-key zen-mode))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(vc-annotate-background "#1c1e1f")
  '(vc-annotate-color-map
-   (list
-    (cons 20 "#b6e63e")
-    (cons 40 "#c4db4e")
-    (cons 60 "#d3d15f")
-    (cons 80 "#e2c770")
-    (cons 100 "#ebb755")
-    (cons 120 "#f3a73a")
-    (cons 140 "#fd971f")
-    (cons 160 "#fc723b")
-    (cons 180 "#fb4d57")
-    (cons 200 "#fb2874")
-    (cons 220 "#f43461")
-    (cons 240 "#ed404e")
-    (cons 260 "#e74c3c")
-    (cons 280 "#c14d41")
-    (cons 300 "#9c4f48")
-    (cons 320 "#77504e")
-    (cons 340 "#555556")
-    (cons 360 "#555556")))
+   (list (cons 20 "#b6e63e") (cons 40 "#c4db4e") (cons 60 "#d3d15f")
+         (cons 80 "#e2c770") (cons 100 "#ebb755") (cons 120 "#f3a73a")
+         (cons 140 "#fd971f") (cons 160 "#fc723b")
+         (cons 180 "#fb4d57") (cons 200 "#fb2874")
+         (cons 220 "#f43461") (cons 240 "#ed404e")
+         (cons 260 "#e74c3c") (cons 280 "#c14d41")
+         (cons 300 "#9c4f48") (cons 320 "#77504e")
+         (cons 340 "#555556") (cons 360 "#555556")))
  '(vc-annotate-very-old-color nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -110,6 +126,8 @@
 
 ;;;; 2. Behavior
 
+;; Tab bar
+(tab-bar-mode 1)
 ;; Tramp-mode
 (require 'tramp)
 (setq tramp-default-method "ssh")
@@ -189,10 +207,36 @@
   :config
   (ivy-mode 1))
 ;; Company Mode, for autocompletion
-(use-package company
-  :diminish
+;(use-package company
+;  :diminish
+;  :config
+;  (add-hook 'after-init-hook 'global -company-mode))
+;; Lightweight alternative to Company
+(use-package corfu
+  ;; Optional customizations
+  ;; :custom
+  ;; (corfu-cycle t)                ;; Enable cycling for `corfu-next/previous'
+  ;; (corfu-quit-at-boundary nil)   ;; Never quit at completion boundary
+  ;; (corfu-quit-no-match nil)      ;; Never quit, even if there is no match
+  ;; (corfu-preview-current nil)    ;; Disable current candidate preview
+  ;; (corfu-preselect 'prompt)      ;; Preselect the prompt
+  ;; (corfu-on-exact-match nil)     ;; Configure handling of exact matches
+
+  ;; Enable Corfu only for certain modes. See also `global-corfu-modes'.
+  ;; :hook ((prog-mode . corfu-mode)
+  ;;        (shell-mode . corfu-mode)
+  ;;        (eshell-mode . corfu-mode))
+  :init
+  (global-corfu-mode))
+;; Icons for Corfu's completion
+(use-package kind-icon
+  :ensure t
+  :after corfu
+  ;:custom
+  ; (kind-icon-blend-background t)
+  ; (kind-icon-default-face 'corfu-default) ; only needed with blend-background
   :config
-  (add-hook 'after-init-hook 'global-company-mode))
+  (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter))
 (use-package which-key
   :defer 0.2
   :diminish which-key-mode
@@ -229,7 +273,21 @@
 ;  :init
 ;  (setq parinfer-rust-auto-download t))
 (use-package paredit
-  :config (paredit-mode))
+  :ensure t
+  :init
+  (add-hook 'clojure-mode-hook #'enable-paredit-mode)
+  (add-hook 'cider-repl-mode-hook #'enable-paredit-mode)
+  (add-hook 'emacs-lisp-mode-hook #'enable-paredit-mode)
+  (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
+  (add-hook 'ielm-mode-hook #'enable-paredit-mode)
+  (add-hook 'lisp-mode-hook #'enable-paredit-mode)
+  (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
+  (add-hook 'scheme-mode-hook #'enable-paredit-mode)
+  :config
+  (show-paren-mode t)
+  :bind (("M-[" . paredit-wrap-square)
+         ("M-{" . paredit-wrap-curly))
+  :diminish nil)
 (use-package doom-themes
   :config
   (doom-themes-visual-bell-config)
@@ -248,7 +306,7 @@
   (setq calendar-latitude 49.00) 
   (setq calendar-longitude 9.00)
   :config
-  (change-theme 'doom-solarized-light 'doom-gruvbox))
+  (change-theme 'doom-earl-grey 'doom-sourcerer))
 (use-package magit
   :bind
   ("C-x g" . magit-status))
@@ -327,7 +385,7 @@
 ;; Disable Auto-wrapping lines
 (global-visual-line-mode t)
 ;; Hilight current line
-;; (global-hl-line-mode)
+(global-hl-line-mode)
 ;; Line spacing
 (setq-default line-spacing 3)
 
@@ -343,7 +401,7 @@
 ;(define-key key-translation-map [?\C-x] [?\C-t])
 ;(define-key key-translation-map [?\C-t] [?\C-x])
  ;;
-(global-set-key (kbd "C-x C-k") 'kill-this-buffer)
+(global-set-key (kbd "C-x C-k") 'kill-current-buffer)
 (global-set-key (kbd "C-x t") 'load-theme)
 
 ;;;; 6. Custom Functions

@@ -199,8 +199,8 @@ bindsym $mod+r mode "resize"
 mode "power" {
         # These bindings trigger as soon as you enter the power mode
 
-        bindsym a exec --no-startup-id i3lock -u -f -i /mnt/hdd/Drive/Photos/Wallpapers/mac_inspired.png; mode "default" 
-        bindsym r exec --no-startup-id i3lock -u -f -i /mnt/hdd/Drive/Photos/Wallpapers/mac_inspired.png; systemctl suspend; mode "default"
+        bindsym a exec --no-startup-id i3lock -f -i /mnt/hdd/Drive/Photos/Wallpapers/black.png; mode "default" 
+        bindsym r exec --no-startup-id i3lock -f -i /mnt/hdd/Drive/Photos/Wallpapers/black.png; systemctl suspend; mode "default"
         bindsym s exec --no-startup-id poweroff 
 
         # back to normal: Enter or Escape or $mod+;
