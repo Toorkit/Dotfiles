@@ -1,4 +1,4 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Toor's Emacs config
 ;; Emacs with
 ;;▓█████ ██▒   █▓ ██▓ ██▓   
@@ -98,11 +98,11 @@
  '(package-hidden-regexps '(""))
  '(package-selected-packages
    '(Magit ace-window all-the-icons-ivy bind-key corfu deft diminish
-           doom-modeline doom-themes evil-mc flexoki-themes
-           highlight-indent-guides ivy kind-icon lua-mode magit
-           markdown-mode markdown-preview-mode minimap minimap-mode
-           neotree paredit racket-mode sly sublimity theme-changer
-           use-package which-key zen-mode))
+           doom-modeline doom-themes emacs-everywhere evil-mc
+           flexoki-themes highlight-indent-guides ivy kind-icon
+           lua-mode magit markdown-mode markdown-preview-mode minimap
+           minimap-mode neotree paredit racket-mode sly sublimity
+           theme-changer use-package which-key zen-mode))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(vc-annotate-background "#1c1e1f")
@@ -327,6 +327,7 @@
   (setq neo-show-hidden-files nil)
   (setq neo-keymap-style 'concise)
   (setq neo-show-hidden-files t))
+
 ;; Recently opened files via C-x C-r
 (use-package recentf
   :bind
@@ -334,45 +335,51 @@
   :config
   (recentf-mode 1)
   (setq recentf-max-menu-items 25))
+
 (use-package diminish
   :config
   (diminish 'undo-tree-mode)
   (diminish 'visual-line-mode)
   (diminish 'eldoc-mode))
+
 (use-package ace-window
   :bind
   ("M-o" . ace-window))
+
 (use-package sly
   :config
   (setq inferior-lisp-program "ros run")
   (add-hook 'sly-mode-hook
-	  (lambda ()
-	    (unless (sly-connected-p)
-	      (save-excursion (sly))))))
-;(use-package geiser-guile)
-; For some reason, geiser-racket will not load the file into the repl.
-;(use-package geiser-racket)
-(use-package racket-mode)
-;  :config
-;  (setq racket-program "C:/Program Files/Racket/Racket.exe"))
-;(use-package deft
-;  :bind ("<f8>" . deft)
-;  :commands (deft)
-;  :config
-;  (setq deft-extensions '("txt" "md" "org"))
-;  (setq deft-use-filter-string-for-filename t)
-;  (setq deft-default-extension "org")
-;  (setq deft-directory "A:/Sync/Obsidian")
-;  (setq deft-use-filename-as-title t))
-;(use-package zetteldeft
-;  :requires deft
-;  :config
-;  (zetteldeft-set-classic-keybindings))
+	        (lambda ()
+	          (unless (sly-connected-p)
+	            (save-excursion (sly))))))
+
+;;(use-package geiser-guile)
+;; For some reason, geiser-racket will not load the file into the repl.
+;;(use-package geiser-racket)
+;;(use-package racket-mode)
+;;  :config
+;;  (setq racket-program "C:/Program Files/Racket/Racket.exe"))
+;;(use-package deft
+;;  :bind ("<f8>" . deft)
+;;  :commands (deft)
+;;  :config
+;;  (setq deft-extensions '("txt" "md" "org"))
+;;  (setq deft-use-filter-string-for-filename t)
+;;  (setq deft-default-extension "org")
+;;  (setq deft-directory "A:/Sync/Obsidian")
+;;  (setq deft-use-filename-as-title t))
+;;(use-package zetteldeft
+;;  :requires deft
+;;  :config
+;;  (zetteldeft-set-classic-keybindings))
+
 (use-package minimap)
 (use-package markdown-mode)
-;(use-package highlight-indent-guides
-;  :config 
-;  (add-hook 'prog-mode-hook 'highlight-indent-guides-mode))
+
+;;(use-package highlight-indent-guides
+;;  :config 
+;;  (add-hook 'prog-mode-hook 'highlight-indent-guides-mode))
 
 ;;;; 4. Appearance
 

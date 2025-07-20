@@ -53,6 +53,9 @@ bindsym --release $mod+shift+q exec xkill
 # start rofi (a program launcher)
 bindsym $mod+space exec rofi -show run
 
+# run emacs as text input
+bindsym $alt+space exec emacsclient --eval "(emacs-everywhere)"
+
 # launch flameshot to take a screenshot of a region and copy to clipboard
 # use the alt key to save to file instead
 bindsym Print exec flameshot gui -c
