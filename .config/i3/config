@@ -41,7 +41,7 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec i3-sensible-terminal
 
 # open GUI file manager
-bindsym $mod+o exec --no-startup-id thunar
+bindsym $mod+g exec --no-startup-id thunar
 
 # open audio mixer
 bindsym $mod+p exec pavucontrol
@@ -112,7 +112,7 @@ bindsym $mod+Shift+space floating toggle; border normal
 #bindsym $mod+d focus child
 
 # focus last floating/tiling container
-bindsym $mod+g focus mode_toggle
+bindsym $mod+o focus mode_toggle
 
 # toggle borders
 bindsym $mod+j border toggle
