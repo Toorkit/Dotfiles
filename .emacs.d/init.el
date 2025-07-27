@@ -127,7 +127,7 @@
 ;;;; 2. Behavior
 
 ;; Tab bar
-(tab-bar-mode 1)
+(tab-bar-mode 0)
 ;; Tramp-mode
 (require 'tramp)
 (setq tramp-default-method "ssh")
@@ -174,6 +174,12 @@
 (setq scroll-conservatively 10000)
 ;; Automatically expand org mode headers
 (setq org-startup-folded nil)
+
+;; Enable source evaluation in Org-mode
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((emacs-lisp . t)
+   (shell . t)))
 
 ;;;; 3. Packages
 
@@ -306,7 +312,7 @@
   (setq calendar-latitude 49.00) 
   (setq calendar-longitude 9.00)
   :config
-  (change-theme 'doom-earl-grey 'doom-sourcerer))
+  (change-theme 'doom-earl-grey 'doom-ayu-dark))
 (use-package magit
   :bind
   ("C-x g" . magit-status))
