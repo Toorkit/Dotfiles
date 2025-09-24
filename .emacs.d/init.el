@@ -98,7 +98,7 @@
  '(package-hidden-regexps '(""))
  '(package-selected-packages
    '(Magit ace-window all-the-icons-ivy bind-key corfu deft diminish
-           doom-modeline doom-themes emacs-everywhere evil-mc
+           doom-modeline doom-themes elpher emacs-everywhere evil-mc
            flexoki-themes highlight-indent-guides ivy kind-icon
            lua-mode magit markdown-mode markdown-preview-mode minimap
            minimap-mode neotree paredit racket-mode sly sublimity
@@ -133,6 +133,9 @@
 (setq tramp-default-method "ssh")
 ;; This is important for preventing file~ backups
 (setq make-backup-files nil)
+;; Autosaving
+(auto-save-visited-mode 1)
+(setq auto-save-visited-interval 60)
 ;; Line numbers in all the buffers
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 ;; UTF-8
@@ -386,6 +389,9 @@
 ;;(use-package highlight-indent-guides
 ;;  :config 
 ;;  (add-hook 'prog-mode-hook 'highlight-indent-guides-mode))
+
+;; Gemini web browser
+(use-package elpher)
 
 ;;;; 4. Appearance
 
