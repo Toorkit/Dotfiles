@@ -62,7 +62,10 @@
     "#ffffff"])
  '(column-number-mode t)
  '(custom-safe-themes
-   '("02d422e5b99f54bd4516d4157060b874d14552fe613ea7047c4a5cfa1288cf4f"
+   '("9b9d7a851a8e26f294e778e02c8df25c8a3b15170e6f9fd6965ac5f2544ef2a9"
+     "f4d1b183465f2d29b7a2e9dbe87ccc20598e79738e5d29fc52ec8fb8c576fcfd"
+     "aec7b55f2a13307a55517fdf08438863d694550565dee23181d2ebd973ebd6b8"
+     "02d422e5b99f54bd4516d4157060b874d14552fe613ea7047c4a5cfa1288cf4f"
      "0d2c5679b6d087686dcfd4d7e57ed8e8aedcccc7f1a478cd69704c02e4ee36fe"
      "dccf4a8f1aaf5f24d2ab63af1aa75fd9d535c83377f8e26380162e888be0c6a9"
      "30d174000ea9cbddecd6cc695943afb7dba66b302a14f9db5dd65074e70cc744"
@@ -97,12 +100,10 @@
  '(objed-cursor-color "#99324B")
  '(package-hidden-regexps '(""))
  '(package-selected-packages
-   '(Magit ace-window all-the-icons-ivy bind-key corfu deft diminish
-           doom-modeline doom-themes elpher emacs-everywhere evil-mc
-           flexoki-themes highlight-indent-guides ivy kind-icon
-           lua-mode magit markdown-mode markdown-preview-mode minimap
-           minimap-mode neotree paredit racket-mode sly sublimity
-           theme-changer use-package which-key zen-mode))
+   '(ace-window alabaster-themes all-the-icons-ivy auto-package-update
+                corfu diminish doom-modeline doom-themes elpher
+                evil-mc fennel-mode kind-icon magit markdown-mode
+                minimap neotree paredit sly theme-changer undo-fu))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(vc-annotate-background "#1c1e1f")
@@ -172,7 +173,7 @@
 ;;(setq redisplay-dont-pause t)
 ;; built-in alternative to smartparens
 ;; (don't use in conjunction with parinfer)
-;(electric-pair-mode 1)
+(electric-pair-mode 1)
 ; Scroll just one line when hitting bottom of window
 (setq scroll-conservatively 10000)
 ;; Automatically expand org mode headers
@@ -366,6 +367,7 @@
 ;;(use-package geiser-guile)
 ;; For some reason, geiser-racket will not load the file into the repl.
 ;;(use-package geiser-racket)
+(use-package fennel-mode)
 ;;(use-package racket-mode)
 ;;  :config
 ;;  (setq racket-program "C:/Program Files/Racket/Racket.exe"))
