@@ -1,4 +1,5 @@
- ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;-*- lexical-binding: t -*-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Toor's Emacs config
 ;; Emacs with
 ;;▓█████ ██▒   █▓ ██▓ ██▓   
@@ -30,6 +31,7 @@
 ;; I know I'll forget.
 
 ;;;; START. Package Management
+
 
 (require 'package)
 (add-to-list 'package-archives
